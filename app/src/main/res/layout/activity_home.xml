@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeLayout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:padding="4dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/sub_linear_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/infoTextView_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="20dp"
+                android:gravity="center"/>
+            <EditText
+                android:id="@+id/amountEditText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Enter Amount*"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/nameEditText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Enter Name*" />
+
+            <EditText
+                android:id="@+id/otherEditText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Other" />
+
+            <EditText
+                android:id="@+id/addressEditText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Enter Address*" />
+
+            <EditText
+                android:id="@+id/mobileEditText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Mobile*"
+                android:maxLength="14"
+                android:inputType="phone"/>
+
+            <Button
+                android:id="@+id/submitButton_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+         <!--   <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/get_button"
+                    android:text="View"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="2dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/update_button"
+                    android:text="Update"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="100dp"/>
+
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="220dp"/>
+
+            </RelativeLayout>  -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

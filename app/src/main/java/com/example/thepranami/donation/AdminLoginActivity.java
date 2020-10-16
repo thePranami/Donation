@@ -36,7 +36,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_login);
         actionBar = getSupportActionBar();
         actionBar.setSubtitle("Admin Login Panel");
-       // loginImageView=(ImageView)findViewById(R.id.loginImageView_id);
+        loginImageView=(ImageView)findViewById(R.id.loginImageView_id);
         loginEmailEditText=(EditText)findViewById(R.id.loginEmailEditText_id);
         loginPasswordEditText=(EditText)findViewById(R.id.loginPasswordEditText_id);
         forgotTextView=(TextView)findViewById(R.id.forgotPasswordTextView_id);
@@ -44,10 +44,10 @@ public class AdminLoginActivity extends AppCompatActivity {
         loginButton=(Button)findViewById(R.id.loginButton_id);
         preferences = getSharedPreferences("ADMIN_DATA", MODE_PRIVATE);
          // set image in imageView
-        //loginImageView.buildDrawingCache();
-      /*  String SavedImage = preferences.getString("IMAGE", "");
-        Bitmap bit_img = decodeBase64(SavedImage.toString());
-        loginImageView.setImageBitmap(bit_img);   */
+        loginImageView.buildDrawingCache();
+        String SavedImage = preferences.getString("IMAGE", "");
+        Bitmap bit_img = decodeBase64(SavedImage);
+        loginImageView.setImageBitmap(bit_img);
         forgotTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,7 +109,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                finishAffinity();
+                                finish();
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
